@@ -1,0 +1,23 @@
+Feature: US01 - Acceso a la aplicación EcoBalance
+Como usuario de EcoBalance, deseo poder acceder a la aplicación para comenzar a utilizar sus funciones
+
+    Scenario: Escenario 1: Iniciar sesión
+    Given soy un usuario registrado de EcoBalance
+    When abro la aplicación en mi smartphone
+    And Se me presenta la Login Page
+    And Ingreso datos como mi <Correo>
+    And Ingreso mi <Contrasenia>
+    And Presiono el boton Iniciar Sesión
+    Then La aplicación me da acceso a la Home Page
+    And puedo acceder a las funcionalidades de la aplicación
+
+    Scenario: Escenario 2: Registro de nueva cuenta 
+    Given soy un nuevo usuario de EcoBalance,
+    When abro la aplicación por primera vez
+    And Se me presenta la Login Page
+    And Ingreso datos como mi <Correo>
+    And Ingreso mi <Contrasenia>
+    And Presiono el boton Crear Cuenta
+    And Confirmo la creacion de la cuenta por correo electronico
+    Then Se ha creado la nueva cuenta exitosamente
+    And puedo acceder a las funcionalidades de la aplicación
